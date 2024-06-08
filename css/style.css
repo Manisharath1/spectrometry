@@ -149,7 +149,7 @@
         opacity: 1;
     }
 }
-
+ 
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
@@ -251,6 +251,26 @@
     left: 0;
 }
 
+/* Custom class to justify text */
+.text-justify {
+    text-align: justify;
+    hyphens: auto; /* Optional: Helps in better text justification by adding hyphens where necessary */
+}
+
+.text-dark.fw-bold {
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Styling for warning text */
+.text-warning {
+    color: #ffc107;
+}
+
+/* Styling for underline text */
+.text-decoration-underline {
+    text-decoration: underline;
+}
 
 /*** Service ***/
 .service-item {
@@ -654,5 +674,5 @@
     border-top: none;
     border-radius: 0 0 5px 5px;
 }
-   
+
 }
