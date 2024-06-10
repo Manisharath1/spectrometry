@@ -369,80 +369,6 @@
 }
 
 
-
-/*** Testimonial ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-item .testimonial-text,
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary) !important;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    color: #FFFFFF !important;
-}
-
-.testimonial-carousel .owl-dots {
-    margin-top: 24px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.testimonial-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #CCCCCC;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-dot.active {
-    background: var(--primary);
-    border-color: var(--primary);
-}
-
-
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
@@ -674,5 +600,113 @@
     border-top: none;
     border-radius: 0 0 5px 5px;
 }
+/* Styling for the circular image */
+.circle-image {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area */
+    border: 2px solid #007bff; /* Optional border for emphasis */
+    padding: 5px; /* Space around the image */
+}
+
+/* Box styling */
+.card {
+    max-height: 400px; /* Adjust the max height as needed */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    background-color: #fff; /* Background color */
+}
+
+/* Card text styling */
+.card-text {
+    font-size: 0.9rem; /* Adjust font size */
+    color: #555; /* Text color */
+}
+
+/* Button styling */
+.btn-primary, .btn-success {
+    padding: 5px 10px; /* Button padding */
+    font-size: 0.8rem; /* Font size for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Margin adjustment for buttons */
+.me-2 {
+    margin-right: 0.5rem;
+}
+
+/* Container adjustments for smaller box */
+.col-lg-4, .col-md-5 {
+    padding: 10px; /* Adjust padding for compactness */
+    margin-bottom: 20px; /* Space below each box */
+}
+/* General container styling */
+.container-xxl {
+    padding-top: 5rem; /* Adjust padding as needed */
+    padding-bottom: 5rem; /* Adjust padding as needed */
+}
+
+/* General container styling */
+.container-xxl {
+    padding-top: 5rem; /* Adjust padding as needed */
+    padding-bottom: 5rem; /* Adjust padding as needed */
+}
+
+/* Testimonial box styling */
+.testimonial-item {
+    background: #ffffff;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    padding: 1rem; /* Inner padding */
+    text-align: center;
+    transition: transform 0.3s; /* Smooth hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content vertically */
+    height: 100%; /* Ensure full height */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Image styling */
+.testimonial-item img {
+    border: 2px solid #007bff; /* Optional border for emphasis */
+}
+
+/* Headline styling */
+.testimonial-item h5 {
+    margin-top: 1rem; /* Space above the headline */
+    margin-bottom: 1rem; /* Space below the headline */
+    color: #007bff; /* Headline color */
+}
+
+/* Text content styling */
+.testimonial-text {
+    padding: 1rem; /* Padding for text container */
+    background: #f8f9fa; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    text-align: justify; /* Justify text alignment */
+    flex-grow: 1; /* Allow text box to grow to fill space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-item {
+        margin-bottom: 2rem; /* Space between items on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-item {
+        margin-bottom: 1.5rem; /* Adjust space for very small screens */
+    }
+}
+
+
 
 }
